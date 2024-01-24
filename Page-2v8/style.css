@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    height: 100%;
+    width: 100%;
+    display: flex; /*parent ko flex do children ko align karne k liye side by side*/
+}
+#left{
+    height: 100%;
+    width: 50%;
+    background-image: url(https://images.unsplash.com/photo-1491933382434-500287f9b54b?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    /* to display image in background remember formula PICS- POSITION, IMAGE, COLOR, SIZE*/
+}
+#overlay-left{
+    height: 100%; /* height dena na bhule div me warna div dikhega hi nhi width automatically parent ki le lega*/
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.336);
+    position: relative;
+}
+#center-left{
+    /* height: 100%; */  /* at this place giving height (mainly due to height) and width disturbing the transform: translate(-50%, -50%);  i.e. items not getting center*/
+    /* width: 100%; */
+    width: 100%;  /* yaha width dene se wo double line me nhi jayega text*/
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    
+}
+#center-left h1 {
+    font-size: 60px;
+}
+#right{
+    height: 100%;
+    width: 50%;
+    background-image: url(https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+}
+#overlay-right{
+    height: 100%; /* height dena na bhule div me warna div dikhega hi nhi width automatically parent ki le lega*/
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.493);
+    position: relative;
+}
+#center-right{
+    /* height: 100%;    at this place giving height and width disturbing the transform: translate(-50%, -50%); i.e. items not getting center 
+    width: 100%; */
+    width: 100%; /* yaha width dene se wo double line me nhi jayega text*/
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+#center-right h1 {
+    font-size: 60px;
+}
